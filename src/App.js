@@ -4,6 +4,7 @@ import Card from '@material-ui/core/Card';
 import Button from "@material-ui/core/Button";
 const IMG_1 = "https://img.lun.ua/construction-800x450/188923.jpg";
 const IMG_2 = "https://img.lun.ua/construction-800x450/185986.jpg";
+const IMG_ALT = "https://uaprom-static.c.prom.st/image/new_design/images/no_image-hce614324446b22b42a09b69093e309fce.png"
 const HEIGHT = 125;
 const WIDTH = 360;
 var similarity = 0.0;
@@ -16,7 +17,7 @@ function BaseCard() {
             </div>
             <div className='left-area'>
                 <div className='image-back'>
-                    <img id='static-image' src={IMG_1} width={WIDTH}/>
+                    <img id='static-image' src={IMG_1} width={WIDTH} alt={IMG_ALT}/>
                 </div>
             </div>
             <div className='central-area'>
