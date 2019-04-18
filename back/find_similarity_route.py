@@ -1,13 +1,7 @@
 import os
-from flask import Flask, request, session, jsonify
-from werkzeug.utils import secure_filename
+from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
-import logging
 from find_similarity_function import find_similarity
-
-logging.basicConfig(level=logging.INFO)
-
-logger = logging.getLogger('test log massage')
 
 app = Flask(__name__)
 
@@ -38,4 +32,5 @@ def find_similarity_route():
 
 if __name__ == "__main__":
     app.secret_key = os.urandom(24)
-    app.run(debug=True,host="0.0.0.0",use_reloader=False)
+    app.run()
+    #app.run(debug=True,host="0.0.0.0",use_reloader=False)
