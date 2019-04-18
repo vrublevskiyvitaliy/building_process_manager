@@ -39,4 +39,4 @@ def find_similarity(image, image_base):
     features_12 = [len(kp_base), len(kp)]
     similarity = len(good) / min(features_12)
     
-    return float('{0:.7f}'.format(similarity))
+    return similarity
