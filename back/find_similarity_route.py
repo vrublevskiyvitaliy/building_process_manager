@@ -25,8 +25,8 @@ def find_similarity_route():
         }
 
     '''
-    img1 = request.form['img1']
-    img2 = request.form['img2']
+    img1 = request.json['img1']
+    img2 = request.json['img2']
     sim = find_similarity(img1, img2)
     return jsonify({'similarity': sim}), 200
 
