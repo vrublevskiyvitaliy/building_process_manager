@@ -2,7 +2,7 @@ import cv2
 from skimage.io import imread
 
 
-def find_similarity(image, image_base):
+def find_similarity(image_base, image):
     """
     Function for comparing two images with SIFT method
     
@@ -37,6 +37,6 @@ def find_similarity(image, image_base):
             good.append([m])
     
     features_12 = [len(kp_base), len(kp)]
-    similarity = 1. * len(good) / min(features_12)
+    similarity = 1. * len(good) / len(matches)
     
     return similarity
